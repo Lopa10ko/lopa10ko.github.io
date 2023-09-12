@@ -18,32 +18,42 @@
         <div>
             <a href="#" class="cv-header-nav-logo">lopa10ko</a>
         </div>
-        <div class="cv-header-nav-menu">
-            <ul class="cv-header-nav-menu-list">
-                <li class="cv-header-nav-menu-list-item">
-                    <a href="#about" class="cv-header-nav-menu-list-item-link">About</a>
+        <div class="nav-menu">
+            <ul class="nav-menu-list">
+                <li class="nav-menu-list-item">
+                    <a href="#about" class="menu-list-item-link" target="_blank">About</a>
                 </li>
-                <li class="cv-header-nav-menu-list-item">
-                    <a href="#projects" class="cv-header-nav-menu-list-item-link">Projects</a>
+                <li class="nav-menu-list-item">
+                    <a href="#projects" class="menu-list-item-link" target="_blank">Projects</a>
                 </li>
-                <li class="cv-header-nav-menu-list-item">
-                    <a href="#contact" class="cv-header-nav-menu-list-item-link">Contact</a>
+                <li class="nav-menu-list-item">
+                    <a href="#contact" class="menu-list-item-link" target="_blank">Contact</a>
                 </li>
             </ul>
         </div>
-        <div class="cv-header-nav-toggle">
+        <div class="nav-toggle">
             <i class='bx bx-menu'></i>
         </div>
     </nav>
 </header>
 
 <main class="cv-main">
+    <aside>
+        <img src="assets/img/face.jpg" alt="lopa10ko" width="100" height="100">
+    </aside>
     <section class="about" id="about">
         <div class="about-inner">
-            test
+            <figure class="quote">
+                <blockquote>
+                    <p>I'm an <s>idiot</s>, I took the <em>adapter</em> for a <b>facade</b>.</p>
+                    <p>Yes, but at least I didn't call it a <q>curator</q></p>
+                </blockquote>
+                <figcaption>
+                    &mdash; undefined from <cite>Undefined Music</cite> project
+                </figcaption>
+            </figure>
         </div>
         <div class="ascii">
-            <hr>
             <pre>
              ⣠⣴⣶⣿⣿⣷⣶⣄⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣾⣿⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀
@@ -61,19 +71,50 @@
 ⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣦⣤⣤⣤⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢿⣿⣿⣿⣿⣿⣿⠿⠋⠉⠛⠋⠉⠉⠁
             </pre>
-            <hr>
         </div>
     </section>
     <section class="projects" id="projects">
+        <article class="solution">
+            <h1>Разбежавшись, прыгну со скалы...</h1>
+            <p>Игрок находится в <code>100</code> шагах справа от пропасти. Каждую секунду он <ins>равновероятно</ins> шагает влево или вправо. Какова примерно вероятность, что через час он не упадет в пропасть?</p>
+            <p>s = j - (n - j) = 2j - n</p>
+            <p>p = 1 - p<sub>fall</sub> = 1 - C<sub>j</sub><sup>n</sup> * 0.5<sup>j</sup> * 0.5<sup>n - j</sup></p>
+            <div class="code">
+                <code>
+                    <pre>
+def get_pyramid(n: int, character: str) -> list:
+    assert len(character) == 1, "Invalid character length"
+    return [(n - i - 1) * ' ' + (2 * i + 1) * character + (n - i - 1) * ' ' for i in range(n)]
+
+print('\n'.join(get_pyramid(5, "*")))
+                    </pre>
+                </code>
+            </div>
+        </article>
         <div class="projects-inner">
-            <h1>Новая тема</h1>
-            <p>что-то здесь есть</p>
-            <h2>Новая подтема</h2>
-            <p>здесь есть это</p>
-            <p>и еще новый абзац</p>
+            <h1>Projects</h1>
+            <h3>Most in-depth research winner (ML)</h3>
+            <p>GazpromNeft</p>
+            <ul>
+                <li>
+                    Developed a neural network for rocks types classification using classic ML and database regulation patterns
+                </li>
+                <li>
+                    Adapted the solution to working conditions, achieved increase in precision from 60% to 85%
+                </li>
+                <li>
+                    Pitched the project to leading specialists and ML architects from GazpromNeft
+                    <ul><li>estimated financial benefit: $43000 per month save on one mine facility</li></ul>
+                </li>
+            </ul>
+            <hr>
             <h3>Ну все, уже хватит</h3>
             <ol>
                 <li>раз</li>
+                <ul>
+                    <li>раз раз</li>
+                    <li>раз два</li>
+                </ul>
                 <li>два</li>
                 <li>три</li>
             </ol>
@@ -81,15 +122,15 @@
     </section>
 </main>
 
-<footer class=-footer">
+<footer class="cv-footer">
     <div class="cv-footer-inner">
-        <section class="cv-footer-list" id="contact">
-            <div class="cv-footer-list-item">
+        <section class="footer-list" id="contact">
+            <div class="footer-list-item">
                 <b>Contact</b>
                 <a href="https://github.com/Lopa10ko" target="_blank">Github</a>
                 <a href="https://t.me/lopa10ko" target="_blank">Telegram</a>
             </div>
-            <div class="cv-footer-list-item">
+            <div class="footer-list-item">
                 <p><small>Russia, Saint-Petersburg</small></p>
                 <p><small>2023</small></p>
             </div>
