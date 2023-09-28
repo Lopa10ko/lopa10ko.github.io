@@ -16,27 +16,27 @@
 
 <body>
 
-<header class="cv-header">
+<header class="cv-header flex">
+    <a href="#" class="textlogo">lopa10ko</a>
+    <button id="nav-toggle" class="nav-toggle sr-button" aria-controls="nav-menu" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+        <i class="bx bx-menu"></i>
+    </button>
     <nav class="cv-header-nav">
-        <div>
-            <a href="#" class="cv-header-nav-logo">lopa10ko</a>
-        </div>
-        <div class="nav-menu">
-            <ul class="nav-menu-list">
-                <li class="nav-menu-list-item">
-                    <a href="#about" class="menu-list-item-link" target="_blank">About</a>
-                </li>
-                <li class="nav-menu-list-item">
-                    <a href="#projects" class="menu-list-item-link" target="_blank">Projects</a>
-                </li>
-                <li class="nav-menu-list-item">
-                    <a href="#contact" class="menu-list-item-link" target="_blank">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div class="nav-toggle">
-            <i class='bx bx-menu'></i>
-        </div>
+        <ul id="nav-menu" data-visible="false" class="nav-menu flex list">
+            <li class="active">
+                <a href="#about" id="about-toggle" class="nav-menu-item about-toggle" target="_self">
+                    <span aria-hidden="true">></span>ABOUT
+                </a>
+            <li>
+                <a href="#projects" id="projects-toggle" class="nav-menu-item projects-toggle" target="_self">
+                    <span aria-hidden="true">></span>PROJECTS
+                </a>
+            <li>
+                <a href="#contact" id="contact-toggle" class="nav-menu-item contact-toggle" target="_self">
+                    <span aria-hidden="true">></span>CONTACT
+                </a>
+        </ul>
     </nav>
 </header>
 
