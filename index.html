@@ -41,87 +41,59 @@
 </header>
 
 <main class="cv-main">
-    <aside>
-        <img src="assets/img/face.jpg" alt="lopa10ko" width="100" height="100">
-    </aside>
-    <section class="about" id="about">
-        <div class="about-inner">
-            <figure class="quote">
-                <blockquote>
-                    <p>I'm an <s>idiot</s>, I took the <em>adapter</em> for a <b>facade</b>.</p>
-                    <p>Yes, but at least I didn't call it a <q>curator</q></p>
-                </blockquote>
-                <figcaption>
-                    &mdash; undefined from <cite>Undefined Music</cite> project
-                </figcaption>
-            </figure>
-        </div>
-        <div class="ascii">
-            <pre>
-             ⣠⣴⣶⣿⣿⣷⣶⣄⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣾⣿⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⡟⠁⣰⣿⣿⣿⡿⠿⠻⠿⣿⣿⣿⣿⣧⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⠏⠀⣴⣿⣿⣿⠉⠀⠀⠀⠀⠀⠈⢻⣿⣿⣇⠀⠀⠀
-⠀⠀⠀⠀⢀⣠⣼⣿⣿⡏⠀⢠⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⡀⠀⠀
-⠀⠀⠀⣰⣿⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⡇⠀⠀
-⠀⠀⢰⣿⣿⡿⣿⣿⣿⡇⠀⠘⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⢀⣸⣿⣿⣿⠁⠀⠀
-⠀⠀⣿⣿⣿⠁⣿⣿⣿⡇⠀⠀⠻⣿⣿⣿⣷⣶⣶⣶⣶⣶⣿⣿⣿⣿⠃⠀⠀⠀
-⠀⢰⣿⣿⡇⠀⣿⣿⣿⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀
-⠀⢸⣿⣿⡇⠀⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠛⠉⢉⣿⣿⠀⠀⠀⠀⠀⠀
-⠀⢸⣿⣿⣇⠀⣿⣿⣿⠀⠀⠀⠀⠀⢀⣤⣤⣤⡀⠀⠀⢸⣿⣿⣿⣷⣦⠀⠀⠀
-⠀⠀⢻⣿⣿⣶⣿⣿⣿⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣦⡀⠀⠉⠉⠻⣿⣿⡇⠀⠀
-⠀⠀⠀⠛⠿⣿⣿⣿⣿⣷⣤⡀⠀⠀⠀⠀⠈⠹⣿⣿⣇⣀⠀⣠⣾⣿⣿⡇⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣦⣤⣤⣤⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢿⣿⣿⣿⣿⣿⣿⠿⠋⠉⠛⠋⠉⠉⠁
-            </pre>
-        </div>
-    </section>
-    <section class="projects" id="projects">
-        <article class="solution">
-            <h1>Разбежавшись, прыгну со скалы...</h1>
-            <p>Игрок находится в <code>100</code> шагах справа от пропасти. Каждую секунду он <ins>равновероятно</ins> шагает влево или вправо. Какова примерно вероятность, что через час он не упадет в пропасть?</p>
-            <p>s = j - (n - j) = 2j - n</p>
-            <p>p = 1 - p<sub>fall</sub> = 1 - C<sub>j</sub><sup>n</sup> * 0.5<sup>j</sup> * 0.5<sup>n - j</sup></p>
-            <div class="code">
-                <code>
-                    <pre>
-def get_pyramid(n: int, character: str) -> list:
-    assert len(character) == 1, "Invalid character length"
-    return [(n - i - 1) * ' ' + (2 * i + 1) * character + (n - i - 1) * ' ' for i in range(n)]
-
-print('\n'.join(get_pyramid(5, "*")))
-                    </pre>
-                </code>
+    <div class="about-outer flex">
+        <aside class="about-aside">
+            <img class="aside-img" src="assets/img/face.jpg" alt="lopa10ko">
+        </aside>
+        <section class="about" id="about">
+            <div class="about-inner">
+                <h1>George Lopatenkо</h1>
+                <h2><code>Software engineer with a passion for machine learning</code></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus metus vitae erat facilisis facilisis. Nam ac ex feugiat neque bibendum mollis. Sed vehicula ligula non pharetra tristique. Fusce eget velit in orci consequat venenatis auctor vitae ex. Suspendisse nisl lectus, tincidunt eget ultricies a, efficitur quis metus. Proin imperdiet fringilla ultrices. Suspendisse tempor mauris ut rutrum venenatis. Suspendisse eget lectus id lacus hendrerit molestie id eget ipsum. Etiam tristique tincidunt velit, viverra ornare dui vulputate nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed quam quis nunc eleifend lobortis. Sed sed enim diam.</p>
+                <p>Maecenas ultrices sodales sagittis. Phasellus id risus metus. Phasellus imperdiet vestibulum leo ut ullamcorper. In hac habitasse platea dictumst. Cras a diam tortor. Suspendisse potenti. Fusce efficitur tellus quis neque aliquam luctus. Suspendisse maximus consectetur massa, dictum euismod ante dignissim hendrerit. Etiam malesuada velit id ante ornare, et gravida mi congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent felis tortor, tempor eu lorem non, maximus commodo dolor. Sed velit risus, ultrices at auctor eget, volutpat sed tortor. Praesent dapibus quam a semper ullamcorper. Vestibulum sed mauris at odio vulputate facilisis sit amet id felis. Etiam consectetur semper tempor.</p>
             </div>
-        </article>
-        <div class="projects-inner">
-            <h1>Projects</h1>
-            <h3>Most in-depth research winner (ML)</h3>
-            <p>GazpromNeft</p>
-            <ul>
-                <li>
-                    Developed a neural network for rocks types classification using classic ML and database regulation patterns
-                </li>
-                <li>
-                    Adapted the solution to working conditions, achieved increase in precision from 60% to 85%
-                </li>
-                <li>
-                    Pitched the project to leading specialists and ML architects from GazpromNeft
-                    <ul><li>estimated financial benefit: $43000 per month save on one mine facility</li></ul>
-                </li>
-            </ul>
-            <hr>
-            <h3>Ну все, уже хватит</h3>
-            <ol>
-                <li>раз</li>
-                <ul>
-                    <li>раз раз</li>
-                    <li>раз два</li>
-                </ul>
-                <li>два</li>
-                <li>три</li>
-            </ol>
+        </section>
+    </div>
+    <div id="broadcast" class="broadcast">
+        <i id="broadcast-string" class="broadcast-string" aria-hidden="true">10101011111100101001010010101101110110110101000101001101101000010110011001101110101010010100011110010100001001010010100110100101011101001001010101100000010100010010</i>
+    </div>
+    <section class="slider-wrapper">
+        <div class="slider flex">
+            <div class="slide-wrapper">
+                <img src="assets/img/slides/slide_1.png" id="slide-1" class="slide" alt="">
+            </div>
+            <div class="slide-wrapper">
+                <img src="assets/img/slides/slide_2.png" id="slide-2" class="slide" alt="">
+            </div>
+            <div class="slide-wrapper">
+                <img src="assets/img/slides/slide_3.png" id="slide-3" class="slide" alt="">
+            </div>
+            <div class="slide-wrapper">
+                <img src="assets/img/slides/slide_4.png" id="slide-4" class="slide" alt="">
+            </div>
+            <div class="slide-wrapper">
+                <img src="assets/img/slides/slide_5.jpeg" id="slide-5" class="slide" alt="">
+            </div>
+            <div class="slide-wrapper">
+                <img src="assets/img/slides/slide_6.jpeg" id="slide-6" class="slide" alt="">
+            </div>
+            <div class="slide-wrapper">
+                <img src="assets/img/slides/slide_7.jpeg" id="slide-7" class="slide" alt="">
+            </div>
+            <div class="slide-wrapper">
+                <img src="assets/img/slides/slide_8.jpeg" id="slide-8" class="slide" alt="">
+            </div>
         </div>
+        <nav class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+            <a href="#slide-4"></a>
+            <a href="#slide-5"></a>
+            <a href="#slide-6"></a>
+            <a href="#slide-7"></a>
+            <a href="#slide-8"></a>
+        </nav>
     </section>
 </main>
 
