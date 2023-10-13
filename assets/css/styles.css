@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200;300;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200;300;400;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&display=swap');
 @import url('normalize.css');
 
@@ -37,7 +37,7 @@
 
 :root {
     --main-font: 'Fira Sans', sans-serif;
-    --big-font: 'Martian Mono', monospace;
+    --mono-font: 'Martian Mono', monospace;
     --big-font-size: 3rem;
     --h2-font-size: 2rem;
     --font-size: 1rem;
@@ -75,7 +75,7 @@ a {
 
 a:hover, a:active {
     background-color: var(--random-color);
-    border-radius: 1rem;
+    border-radius: var(--main-border-radius);
     color: var(--light-text-color);
 }
 
@@ -138,7 +138,7 @@ a:hover, a:active {
 
 /* HEADER */
 .cv-header {
-    font-family: var(--big-font);
+    font-family: var(--mono-font);
     position: fixed;
     top: 0;
     width: 98%;
@@ -153,7 +153,7 @@ a:hover, a:active {
     padding: 1rem;
     background: var(--header-hsl);
     backdrop-filter: blur(var(--blur));
-    border-radius: 1rem;
+    border-radius: var(--main-border-radius);
     align-items: stretch;
 }
 
@@ -182,7 +182,7 @@ a:hover, a:active {
         position: fixed;
         background: var(--header-hsl);
         backdrop-filter: blur(var(--blur));
-        border-radius: 1rem;
+        border-radius: var(--main-border-radius);
         z-index: var(--z-front-front);
         right: 2rem;
         top: 0;
@@ -203,7 +203,7 @@ a:hover, a:active {
 .textlogo {
     background: var(--header-hsl);
     backdrop-filter: blur(var(--blur));
-    border-radius: 1rem;
+    border-radius: var(--main-border-radius);
     font-weight: var(--font-weight-strong);
     font-size: var(--big-font-size);
     z-index: var(--z-front);
