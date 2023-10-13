@@ -378,11 +378,20 @@ a:hover, a:active {
 }
 
 .cv-footer {
-    color: var(--light-additional-color);
-    --gap: 1rem;
+    font-family: var(--mono-font);
+}
+
+.footer-list {
+    padding: 1rem;
 }
 
 .contact-item {
-    --gap: 0.5rem;
+    --gap: 0.25rem;
+    font-weight: var(--font-weight-strong);
     align-items: center;
+}
+
+.load-time-date-wrapper {
+    font-weight: var(--font-weight-light);
+    justify-content: right;
 }
