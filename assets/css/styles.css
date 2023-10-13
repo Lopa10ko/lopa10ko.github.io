@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200;300;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200;300;400;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&display=swap');
 @import url('normalize.css');
 
@@ -6,6 +6,7 @@
 :root {
     --header-height: 4rem;
     --main-gap: 1rem;
+    --main-border-radius: 1rem;
     --slider-max-width: 12rem;
     --grid-height: 70vh;
     --grid-width: 70vw;
@@ -21,6 +22,8 @@
 
 :root {
     --random-color: blue;
+    --highlight-color: white;
+    --background-color: white;
     --light-text-color: black;
     --light-first-color: #5CDB95;
     --light-additional-color: #05386B;
@@ -34,7 +37,7 @@
 
 :root {
     --main-font: 'Fira Sans', sans-serif;
-    --big-font: 'Martian Mono', monospace;
+    --mono-font: 'Martian Mono', monospace;
     --big-font-size: 3rem;
     --h2-font-size: 2rem;
     --font-size: 1rem;
@@ -72,7 +75,7 @@ a {
 
 a:hover, a:active {
     background-color: var(--random-color);
-    border-radius: 1rem;
+    border-radius: var(--main-border-radius);
     color: var(--light-text-color);
 }
 
@@ -118,9 +121,24 @@ a:hover, a:active {
     outline: none;
 }
 
+#about {
+    border-radius: var(--main-border-radius);
+    background: var(--highlight-color);
+}
+
+#projects {
+    border-radius: var(--main-border-radius);
+    background: var(--highlight-color);
+}
+
+#contact {
+    border-radius: var(--main-border-radius);
+    background: var(--highlight-color);
+}
+
 /* HEADER */
 .cv-header {
-    font-family: var(--big-font);
+    font-family: var(--mono-font);
     position: fixed;
     top: 0;
     width: 98%;
@@ -135,7 +153,7 @@ a:hover, a:active {
     padding: 1rem;
     background: var(--header-hsl);
     backdrop-filter: blur(var(--blur));
-    border-radius: 1rem;
+    border-radius: var(--main-border-radius);
     align-items: stretch;
 }
 
@@ -164,7 +182,7 @@ a:hover, a:active {
         position: fixed;
         background: var(--header-hsl);
         backdrop-filter: blur(var(--blur));
-        border-radius: 1rem;
+        border-radius: var(--main-border-radius);
         z-index: var(--z-front-front);
         right: 2rem;
         top: 0;
@@ -185,7 +203,7 @@ a:hover, a:active {
 .textlogo {
     background: var(--header-hsl);
     backdrop-filter: blur(var(--blur));
-    border-radius: 1rem;
+    border-radius: var(--main-border-radius);
     font-weight: var(--font-weight-strong);
     font-size: var(--big-font-size);
     z-index: var(--z-front);
@@ -195,6 +213,7 @@ a:hover, a:active {
 .about-outer {
     box-sizing: border-box;
     padding: var(--main-gap);
+    --gap: 2rem;
 }
 
 .about-inner > h1:hover {
@@ -261,13 +280,18 @@ a:hover, a:active {
 }
 
 .textcard-heading-wrapper {
-    display: flex;
-    gap: 0.5rem;
+    --gap: 0.5rem;
     align-items: center;
 }
 
-.textcard-heading-wrapper > a {
+.textcard-heading-wrapper > .textcard-heading {
     text-decoration: underline;
+    text-decoration-color: var(--random-color);
+}
+
+.textcard:nth-child(2n + 1) > .textcard-heading-wrapper > .textcard-heading {
+    text-decoration: underline;
+    text-decoration-style: dotted;
     text-decoration-color: var(--random-color);
 }
 
@@ -353,8 +377,21 @@ a:hover, a:active {
     background: var(--random-color);
 }
 
-
 .cv-footer {
-    color: var(--light-additional-color);
-    --gap: 1rem;
+    font-family: var(--mono-font);
+}
+
+.footer-list {
+    padding: 1rem;
+}
+
+.contact-item {
+    --gap: 0.25rem;
+    font-weight: var(--font-weight-strong);
+    align-items: center;
+}
+
+.load-time-date-wrapper {
+    font-weight: var(--font-weight-light);
+    justify-content: right;
 }
