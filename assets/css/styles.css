@@ -6,6 +6,7 @@
 :root {
     --header-height: 4rem;
     --main-gap: 1rem;
+    --main-border-radius: 1rem;
     --slider-max-width: 12rem;
     --grid-height: 70vh;
     --grid-width: 70vw;
@@ -21,6 +22,8 @@
 
 :root {
     --random-color: blue;
+    --highlight-color: white;
+    --background-color: white;
     --light-text-color: black;
     --light-first-color: #5CDB95;
     --light-additional-color: #05386B;
@@ -116,6 +119,21 @@ a:hover, a:active {
     cursor: pointer;
     overflow: hidden;
     outline: none;
+}
+
+#about {
+    border-radius: var(--main-border-radius);
+    background: var(--highlight-color);
+}
+
+#projects {
+    border-radius: var(--main-border-radius);
+    background: var(--highlight-color);
+}
+
+#contact {
+    border-radius: var(--main-border-radius);
+    background: var(--highlight-color);
 }
 
 /* HEADER */
