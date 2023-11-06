@@ -21,7 +21,7 @@
 }
 
 :root {
-    --random-color: blue;
+    --random-color: green;
     --highlight-color: white;
     --background-color: white;
     --light-text-color: black;
@@ -225,6 +225,12 @@ a {
     justify-content: right;
 }
 
+a:hover, a:active {
+    background-color: var(--random-color);
+    border-radius: var(--main-border-radius);
+    color: var(--light-text-color);
+}
+
 .active {
-    color: var(--light-first-color);
+    color: var(--random-color);
 }
