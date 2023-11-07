@@ -1,5 +1,104 @@
 @import url('styles.css');
 
+p {
+    width: 100%;
+    word-wrap: break-word;
+}
+
 .active {
     color: var(--random-color);
+}
+
+.msg-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.msg-heading > h1:hover {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--random-color);
+    font-weight: var(--font-weight-light);
+}
+
+.msg-body {
+    width: 100%;
+    padding: 0 var(--main-gap) var(--main-gap);
+}
+
+.msg-form {
+    padding: 0 var(--main-gap);
+    align-items: center;
+    justify-content: center;
+    gap: var(--main-gap);
+}
+
+.msg-text-wrapper, .submit-wrapper {
+    width: min(50rem, 90%);
+    display: flex;
+    padding: 0 var(--main-gap);
+}
+
+.submit-wrapper {
+    justify-content: end;
+}
+
+.extendable {
+    width: 100%;
+    resize: vertical;
+    overflow: auto;
+    min-height: 2rem;
+    max-height: 25vh;
+}
+
+/* messages */
+.msg-list-wrapper {
+    padding: var(--main-gap);
+    margin: 0 auto;
+}
+
+.msg-list {
+    display: grid;
+    gap: var(--main-gap);
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    margin: 0 auto;
+}
+
+.msg-actions {
+    gap: 0.5rem;
+    justify-content: end;
+}
+
+.msg-box {
+    padding: var(--main-gap);
+    border-radius: var(--main-gap);
+    border: 0.125rem solid var(--random-color);
+}
+
+textarea::placeholder {
+    opacity: 1;
+    color: var(--light-text-color);
+}
+
+textarea, input, .msg-edit, .msg-delete {
+    color: var(--light-text-color);
+    outline: none;
+    --main-gap: 0.5rem;
+    padding: var(--main-gap);
+    border-radius: var(--main-gap);
+}
+
+textarea {
+    border: none;
+    background: linear-gradient(to top, var(--random-color), var(--header-hsl));
+    box-shadow: 0 0 var(--blur) 0.5rem var(--shadow-hsl);
+}
+
+input, .msg-edit, .msg-delete {
+    background: var(--background-color);
+}
+
+input:hover, .msg-edit:hover, .msg-delete:hover {
+    background: var(--random-color);
 }
