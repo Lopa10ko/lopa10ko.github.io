@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en, ru">
 <head>
     <meta charset="utf-8">
     <title>CV: George Lopatenko</title>
     <meta name="keywords" content="George Lopatenko">
     <meta name="author" content="George Lopatenko">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="icon" href="img/face.jpg">
     <script src="js/nav.js" defer></script>
+    <script src="js/random-color.js" defer></script>
     <script src="js/time-load.js"></script>
     <script src="js/active-nav.js"></script>
+    <script src="js/form-message.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -40,21 +42,45 @@
 </header>
 
 <main class="cv-main">
-    <div class="about-outer flex">
-        <section class="about" id="about">
-            <div class="about-inner">
-                <h1><code>Hello, world!</code></h1>
-            </div>
-        </section>
+    <div class="msg-container flex">
+        <span class="msg-heading">
+            <h1>Write me a message:</h1>
+        </span>
+        <div class="msg-body" id="add-msg">
+            <form class="msg-form flex column" id="new-msg-form">
+                <div class="msg-text-wrapper">
+                    <textarea
+                            spellcheck="true"
+                            lang="en, ru"
+                            aria-label=""
+                            id="content"
+                            class="extendable"
+                            placeholder="type your message..."></textarea>
+                </div>
+                <div class="submit-wrapper">
+                    <input
+                            type="submit"
+                            id="new-msg-submit"
+                            value="send"/>
+                </div>
+            </form>
+        </div>
     </div>
-
+    <div id="broadcast" class="broadcast">
+        <i id="broadcast-string" class="broadcast-string" aria-hidden="true">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</i>
+    </div>
+    <section class="msg-list-wrapper">
+        <div class="msg-list" id="msg-list">
+            <!--runtime generated messages-->
+        </div>
+    </section>
 </main>
 
 <footer class="cv-footer">
     <section class="footer-list flex column" id="contact">
         <div class="footer-list-item flex list">
             <div class="contact-item flex" id="github-box">
-                <svg aria-hidden="true" class="mini-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg aria-hidden="true" class="mini-svg" xmlns="http://www.w3.org/2000/svg">
                     <g id="surface-github">
                         <path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 8 0 C 12.417969 0 16 3.671875 16 8.203125 C 16 11.824219 13.710938 14.898438 10.535156 15.984375 C 10.128906 16.066406 9.984375 15.808594 9.984375 15.589844 C 9.984375 15.320312 9.992188 14.4375 9.992188 13.339844 C 9.992188 12.574219 9.738281 12.074219 9.449219 11.820312 C 11.230469 11.617188 13.105469 10.925781 13.105469 7.773438 C 13.105469 6.878906 12.792969 6.148438 12.28125 5.574219 C 12.363281 5.367188 12.636719 4.53125 12.203125 3.402344 C 12.203125 3.402344 11.53125 3.179688 10.003906 4.242188 C 9.363281 4.0625 8.679688 3.96875 8 3.964844 C 7.320312 3.96875 6.636719 4.0625 5.996094 4.242188 C 4.46875 3.179688 3.796875 3.402344 3.796875 3.402344 C 3.363281 4.53125 3.636719 5.367188 3.71875 5.574219 C 3.207031 6.148438 2.894531 6.878906 2.894531 7.773438 C 2.894531 10.917969 4.761719 11.621094 6.539062 11.828125 C 6.3125 12.03125 6.105469 12.394531 6.03125 12.925781 C 5.574219 13.132812 4.417969 13.496094 3.703125 12.242188 C 3.703125 12.242188 3.28125 11.457031 2.476562 11.398438 C 2.476562 11.398438 1.699219 11.386719 2.421875 11.894531 C 2.421875 11.894531 2.945312 12.148438 3.3125 13.097656 C 3.3125 13.097656 3.78125 14.558594 6.007812 14.0625 C 6.011719 14.75 6.019531 15.394531 6.019531 15.589844 C 6.019531 15.808594 5.871094 16.0625 5.472656 15.984375 C 2.292969 14.902344 0 11.828125 0 8.203125 C 0 3.671875 3.582031 0 8 0 "/>
                     </g>
@@ -64,7 +90,7 @@
                 </a>
             </div>
             <div class="contact-item flex" id="telegram-box">
-                <svg aria-hidden="true" class="mini-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg aria-hidden="true" class="mini-svg" xmlns="http://www.w3.org/2000/svg">
                     <g id="surface-telegram">
                         <path style=" stroke:none;fill-rule:nonzero;fill:rgb(25.098039%,70.196078%,87.843137%);fill-opacity:1;" d="M 8 0 C 3.582031 0 0 3.582031 0 8 C 0 12.417969 3.582031 16 8 16 C 12.417969 16 16 12.417969 16 8 C 16 3.582031 12.417969 0 8 0 Z M 8 0 "/>
                         <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 11.894531 4.601562 L 10.464844 11.804688 C 10.464844 11.804688 10.265625 12.304688 9.714844 12.066406 L 6.417969 9.539062 L 5.21875 8.957031 L 3.199219 8.277344 C 3.199219 8.277344 2.890625 8.167969 2.859375 7.929688 C 2.828125 7.6875 3.210938 7.558594 3.210938 7.558594 L 11.234375 4.410156 C 11.234375 4.410156 11.894531 4.121094 11.894531 4.601562 "/>

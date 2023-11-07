@@ -1,11 +1,11 @@
 // From http://stackoverflow.com/a/5365036/2065702
-const aboutToggle = document.querySelector('.about-toggle');
-const projectsToggle = document.querySelector('.projects-toggle');
-const contactToggle = document.querySelector('.contact-toggle');
+const aboutToggle = document.getElementById('about-toggle');
+const projectsToggle = document.getElementById('projects-toggle');
+const contactToggle = document.getElementById('contact-toggle');
 const textlogoToggle = document.querySelector('.textlogo');
 
 function generateRandomColor() {
-    const randomColor = "#"+((1<<24)*Math.random()|0).toString(16);
+    const randomColor = `hsl(${Math.floor(Math.random() * 360)}, 100%, 60%)`;
     document.documentElement.style.setProperty("--random-color", randomColor);
 }
 
