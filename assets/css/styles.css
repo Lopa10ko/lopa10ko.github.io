@@ -249,17 +249,24 @@ a:hover, a:active {
 /* SCROLLING BROADCAST STRING */
 .broadcast {
     overflow: hidden;
-    white-space: nowrap;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
 }
 
-.broadcast > i {
+.broadcast-string {
     font-family: var(--main-font);
     font-size: var(--h2-font-size);
     font-weight: var(--font-weight-strong);
+    white-space: nowrap;
+    display: inline-block;
+    animation: moveText linear 600s infinite;
+}
+
+@keyframes moveText {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-20%); }
 }
 
 /* PROJECTS SECTION */
