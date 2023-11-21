@@ -102,3 +102,19 @@ input, .msg-edit, .msg-delete {
 input:hover, .msg-edit:hover, .msg-delete:hover {
     background: var(--random-color);
 }
+
+#msg-loader {
+    border: 1rem solid var(--dark-text-color);
+    border-top: 1rem solid var(--random-color);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    animation: spin 0.5s linear infinite;
+    margin: 0 auto;
+    z-index: var(--z-front-front);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
