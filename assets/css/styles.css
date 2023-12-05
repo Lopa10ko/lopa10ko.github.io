@@ -219,6 +219,12 @@ a:hover, a:active {
     font-weight: var(--font-weight-light);
 }
 
+#subtitle {
+
+    background-color: var(--random-color);
+    border-radius: 0.25rem;
+}
+
 .aside-img {
     display: table;
     width: min(var(--grid-width), var(--grid-height));
