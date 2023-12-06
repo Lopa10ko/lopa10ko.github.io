@@ -56,14 +56,14 @@ export function getOverlap(start, [...end]) {
 
 const target = document.getElementById('subtitle');
 const steps = [
-    1500, 'machine learning',
-    1500, 'NLP',
-    1500, 'time series',
-    1500, 'Python ~3.11',
-    1500, 'data analysis',
-    1500, 'applied math',
-    1500, 'Kotlin and Compose',
-    1500, 'Java, Gradle, Spring',
-    1500, 'her beautiful smile',
+    2000, 'machine learning',
+    2000, 'NLP',
+    2000, 'time series',
+    2000, 'Python ~3.11',
+    2000, 'data analysis',
+    2000, 'applied math',
+    2000, 'Kotlin, Compose',
+    2000, 'Java, Spring',
+    2000, 'her cute smile',
 ];
 type(target, ...steps, type);
