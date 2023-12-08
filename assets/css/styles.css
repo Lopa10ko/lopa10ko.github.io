@@ -219,8 +219,17 @@ a:hover, a:active {
     font-weight: var(--font-weight-light);
 }
 
-#subtitle {
+.fixed-twoliner {
+    height: 5rem;
+    overflow: hidden;
+}
 
+.fixed-twoliner > h2 {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#subtitle {
     background-color: var(--random-color);
     border-radius: 0.25rem;
 }
