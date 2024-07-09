@@ -21,7 +21,7 @@
 }
 
 :root {
-    --random-color: green;
+    --random-color: cyan;
     --highlight-color: white;
     --background-color: white;
     --light-text-color: black;
@@ -43,7 +43,6 @@
     --font-weight-light: 300;
 }
 
-/* SHARED CLASSES */
 html {
     scroll-behavior: smooth;
     width: 100%;
@@ -54,7 +53,7 @@ html {
 body {
     font-size: var(--font-size);
     overflow-x: hidden;
-    width: 98%;
+    width: 66%;
     margin: auto;
 }
 
@@ -64,6 +63,17 @@ main {
     font-weight: var(--font-weight);
 }
 
+.aside-video {
+    width: 120px;
+    border-radius: 30%;
+}
+
+.contact-item {
+    --gap: 0.25rem;
+    font-weight: var(--font-weight-strong);
+    align-items: center;
+}
+
 a {
     color: var(--light-text-color);
     text-decoration: none;
@@ -71,7 +81,7 @@ a {
 
 a:hover, a:active {
     background-color: var(--random-color);
-    border-radius: var(--main-border-radius);
+    border-radius: 10%;
     color: var(--light-text-color);
 }
 
@@ -95,259 +105,8 @@ a:hover, a:active {
     gap: var(--gap, 1rem);
 }
 
-.sr-only {
-    position: absolute;
-    aspect-ratio: 1;
-    width: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-}
-
-.bx-menu {
-    font-size: var(--big-font-size);
-}
-
-.sr-button {
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-}
-
-#about {
-    border-radius: var(--main-border-radius);
-    background: var(--highlight-color);
-}
-
-#projects {
-    border-radius: var(--main-border-radius);
-    background: var(--highlight-color);
-}
-
-#contact {
-    border-radius: var(--main-border-radius);
-    background: var(--highlight-color);
-}
-
-/* HEADER */
-.cv-header {
+footer {
     font-family: var(--mono-font);
-    position: fixed;
-    top: 0;
-    width: 98%;
-    padding: 0 1vw;
-    margin: auto;
-    align-items: stretch;
-    justify-content: space-between;
-    z-index: var(--z-front);
-}
-
-.nav-menu {
-    padding: 1rem;
-    background: var(--header-hsl);
-    backdrop-filter: blur(var(--blur));
-    border-radius: var(--main-border-radius);
-    align-items: stretch;
-}
-
-.nav-toggle {
-    display: none;
-}
-
-
-@media screen and (max-width: 70rem) {
-    .nav-menu {
-        --gap: 5em;
-        position: fixed;
-        flex-direction: column;
-        padding: min(20vh, 10rem) 2em;
-        inset: 0 0 0 30%;
-        z-index: var(--z-front);
-        transform: translateX(100%);
-    }
-
-    .nav-menu[data-visible="true"] {
-        transform: translateX(0%);
-    }
-
-    .nav-toggle {
-        display: block;
-        position: fixed;
-        background: var(--header-hsl);
-        backdrop-filter: blur(var(--blur));
-        border-radius: var(--main-border-radius);
-        z-index: var(--z-front-front);
-        right: 2rem;
-        top: 0;
-    }
-}
-
-.cv-header-nav a {
-    font-size: var(--h2-font-size);
-    font-weight: var(--font-weight-light);
-}
-
-.cv-header-nav a > [aria-hidden="true"] {
-    font-size: var(--h2-font-size);
-    font-weight: var(--font-weight-strong);
-    margin-inline-end: 0.2em;
-}
-
-.textlogo {
-    background: var(--header-hsl);
-    backdrop-filter: blur(var(--blur));
-    border-radius: var(--main-border-radius);
-    font-weight: var(--font-weight-strong);
-    font-size: var(--big-font-size);
-    z-index: var(--z-front);
-}
-
-/* ABOUT SECTION */
-.about-outer {
-    box-sizing: border-box;
-    padding: var(--main-gap);
-    --gap: 2rem;
-}
-
-.about-inner > h1:hover {
-    text-decoration: underline;
-    text-decoration-style: wavy;
-    text-decoration-color: var(--random-color);
-    font-weight: var(--font-weight-light);
-}
-
-.fixed-twoliner {
-    height: 5rem;
-    overflow: hidden;
-}
-
-.fixed-twoliner > h2 {
-    margin: 0 auto;
-    padding: 0;
-}
-
-#subtitle {
-    background-color: var(--random-color);
-    border-radius: 0.25rem;
-}
-
-.aside-img {
-    display: table;
-    width: min(var(--grid-width), var(--grid-height));
-    margin: 0 auto;
-    border-radius: 25%;
-    box-shadow: 0 0 var(--blur) 0.2rem var(--shadow-hsl);
-    object-fit: fill;
-}
-
-@media screen and (max-width: 70rem) {
-    .about-outer {
-        flex-direction: column;
-        box-sizing: border-box;
-        padding: var(--main-gap);
-        gap: var(--main-gap)
-    }
-
-    .aside-img {
-        display: table;
-        width: min(var(--grid-width), var(--grid-height));
-        margin: 0 auto;
-        border-radius: 25%;
-        box-shadow: 0 0 var(--blur) 0.2rem var(--shadow-hsl);
-        object-fit: fill;
-    }
-}
-
-/* SCROLLING BROADCAST STRING */
-.broadcast {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.broadcast-string {
-    font-family: var(--main-font);
-    font-size: var(--h2-font-size);
-    font-weight: var(--font-weight-strong);
-    white-space: nowrap;
-    display: inline-block;
-    animation: moveText linear 600s infinite;
-}
-
-@keyframes moveText {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-20%); }
-}
-
-/* PROJECTS SECTION */
-.projects {
-    padding: var(--main-gap);
-    margin: 0 auto;
-}
-
-.projects-textcard {
-    display: grid;
-    gap: var(--main-gap);
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    margin: 0 auto;
-}
-
-.textcard-heading-wrapper {
-    --gap: 0.5rem;
-    align-items: center;
-}
-
-.textcard-heading-wrapper > .textcard-heading {
-    text-decoration: underline;
-    text-decoration-color: var(--random-color);
-}
-
-.textcard:nth-child(2n + 1) > .textcard-heading-wrapper > .textcard-heading {
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    text-decoration-color: var(--random-color);
-}
-
-.textcard-desc-wrapper {
-    padding: 0 1rem;
-    text-align: justify;
-}
-
-.textcard-desc-stack {
-    text-align: left;
-    display: grid;
-    gap: 0.5rem;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.desc-stack-item {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-}
-
-.textcard-desc {
-    font-size: var(--small-font-size);
-    font-weight: var(--font-weight-light);
-}
-
-.cv-footer {
-    font-family: var(--mono-font);
-}
-
-.footer-list {
-    padding: 1rem;
-}
-
-.contact-item {
-    --gap: 0.25rem;
-    font-weight: var(--font-weight-strong);
-    align-items: center;
 }
 
 .load-time-date-wrapper {
