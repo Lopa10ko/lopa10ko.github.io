@@ -63,7 +63,7 @@ main {
     font-weight: var(--font-weight);
 }
 
-.aside-video {
+video {
     width: 120px;
     border-radius: 30%;
 }
