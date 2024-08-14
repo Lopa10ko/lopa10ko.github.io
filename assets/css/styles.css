@@ -16,7 +16,7 @@
 }
 
 :root {
-    --main-font: 'Consolas', 'Courier New', monospace;
+    --main-font: 'Consolas', monospace;
     --big-font-size: 3rem;
     --h2-font-size: 2rem;
     --font-size: 1rem;
@@ -36,13 +36,13 @@ html {
 body {
     font-size: var(--font-size);
     overflow-x: hidden;
-    width: 66%;
+    width: 50%;
     margin: auto;
 }
 
 @media screen and (max-width: 70rem) {
     body {
-        width: 90%;
+        width: 80%;
     }
     .about-outer {
         flex-direction: column;
