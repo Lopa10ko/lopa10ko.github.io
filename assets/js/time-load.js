@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const loadTimeValue = document.getElementById('load-time');
-    const now = performance.now();
-    loadTimeValue.innerHTML = Math.round(parseFloat(now)) / 1000  + " s";
+    const loadTimeElement = document.getElementById('load-time');
+    const loadYearElement = document.getElementById('load-year');
+    loadTimeElement.innerHTML = performance.now() / 1000  + "s";
+    loadYearElement.innerHTML = new Date().getFullYear().toString();
 });
