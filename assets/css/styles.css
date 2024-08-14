@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200;300;400;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&display=swap');
 @import url('normalize.css');
 
 /* CONSTANTS */
@@ -18,13 +16,12 @@
 }
 
 :root {
-    --main-font: 'Fira Sans', sans-serif;
-    --mono-font: 'Martian Mono', monospace;
+    --main-font: 'Consolas', 'Courier New', monospace;
     --big-font-size: 3rem;
     --h2-font-size: 2rem;
     --font-size: 1rem;
     --small-font-size: 0.875rem;
-    --font-weight: 400;
+    --font-weight: 500;
     --font-weight-strong: 800;
     --font-weight-light: 300;
 }
@@ -86,6 +83,15 @@ a:hover, a:active {
     color: var(--light-text-color);
 }
 
+strong {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+strong:hover {
+    color: var(--random-color);
+}
+
 .mini-svg {
     width: var(--font-size);
     height: var(--font-size);
@@ -114,7 +120,7 @@ a:hover, a:active {
 }
 
 footer {
-    font-family: var(--mono-font);
+    font-family: var(--main-font);
 }
 
 .load-time-date-wrapper {
