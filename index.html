@@ -13,83 +13,31 @@
 </head>
 
 <body>
-
-<main>
-    <div class="card">
-        <div class="card-back">
-            <code class="code-back">
-                <div class="intro-item right-align">
-                    <span class="intro-word">George</span>
-                </div>
-                <div class="intro-item right-align">
-                    <span class="intro-word">&nbsp;</span>
-                    <span class="intro-word">Lopa10ko</span>
-                </div>
-                <div class="intro-item">
-                    <span class="intro-word">&nbsp;</span>
-                </div>
-                <div class="intro-item">
-                    <span class="intro-word">&nbsp;</span>
-                </div>
-                <div class="intro-item right-align">
-                    <span class="intro-word">
-                        <a href="https://github.com/Lopa10ko" class="intro-link">
-                            <span>
-                                <span>→</span><span>G</span><span>I</span><span>T</span><span>H</span><span>U</span><span>B</span>
-                            </span>
-                        </a>
-                    </span>
-                </div>
-            </code>
-            <video playsinline autoplay loop muted class="video-back">
-                <source src="assets/img/face.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+    <div id="flashlight-root">
+        <div class="video-avatar">
+            <video class="avatar-video" src="assets/img/face.mp4" autoplay loop muted playsinline></video>
         </div>
-
-        <div class="card-front">
-            <code>
-                <div class="intro-item flex name-line lit">
-                    <span class="intro-word">George</span>
-                    <span class="intro-word">&nbsp;</span>
-                    <span class="intro-word">Lopatenko</span>
-                </div>
-                <div class="intro-item flex">
-                    <span class="intro-word">software</span>
-                    <span class="intro-word">&nbsp;</span>
-                    <span class="intro-word">engineer</span>
-                    <span class="intro-word">&nbsp;</span>
-                    <span class="intro-word">&amp;</span>
-                </div>
-                <div class="intro-item flex">
-                    <span class="intro-word">ML</span>
-                    <span class="intro-word">developer</span>
-                    <span class="intro-word">&nbsp;</span>
-                    <span class="intro-word">&nbsp;</span>
-                </div>
-                <div class="intro-item flex">
-                    <span class="intro-word">@NSSlab</span>
-                    <span class="intro-word">&nbsp;</span>
-                    <span class="intro-word">ITMO</span>
-                </div>
-                <div class="intro-item flex ">
-                    <span class="intro-word">loc:</span>
-                    <span class="intro-word">Saint-Petersburg</span>
-                </div>
-            </code>
+        <div class="center-text">
+            <span class="letter">G</span><span class="letter">E</span><span class="letter">O</span><span class="letter">R</span><span class="letter">G</span><span class="letter">E</span>
+            <span class="letter"> </span>
+            <span class="letter">L</span><span class="letter">O</span><span class="letter">P</span><span class="letter">A</span><span class="letter">T</span><span class="letter">E</span><span class="letter">N</span><span class="letter">K</span><span class="letter">O</span>
+        </div>
+        <div class="subtitle-group">
+            <span class="subtitle">software engineer &amp; ML developer</span>
+            <span class="subtitle">@NSSlab ITMO <a href="https://github.com/Lopa10ko" target="_blank" rel="noopener" class="lit">github.com/Lopa10ko</a></span>
+            <span class="subtitle">loc: Saint-Petersburg</span>
         </div>
     </div>
-</main>
-
-<footer class="flex column right-align">
-    <section class="footer-list flex column" id="contact">
-        <div class="load-time-date-wrapper flex">
-            <p class="load-time" id="load-time"></p>
-            <p class="lit">@lopa10ko</p>
-            <p class="load-year" id="load-year"></p>
-        </div>
-    </section>
-</footer>
-
+    <footer class="flex column right-align">
+        <section class="footer-list flex column" id="contact">
+            <div class="load-time-date-wrapper flex">
+                <p class="load-time" id="load-time"></p>
+                <p class="lit">@lopa10ko</p>
+                <p class="load-year" id="load-year"></p>
+            </div>
+        </section>
+    </footer>
+    <script src="assets/js/flashlight.js"></script>
 </body>
 </html>
+
